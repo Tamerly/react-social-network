@@ -1,0 +1,13 @@
+.item {
+    color: rgb(32, 7, 56);
+    background-color: azure;
+    border-radius: 8px;
+    padding: 2px;
+    margin-bottom: 8px;
+  }
+  
+.item img {
+    width: 80px;
+    border-radius: 8px;
+  }
+

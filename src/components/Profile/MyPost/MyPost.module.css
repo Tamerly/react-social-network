@@ -1,0 +1,6 @@
+.box {
+  border-style: groove;
+  border-radius: 8px;
+  margin: 8px;
+  padding: 8px;
+}

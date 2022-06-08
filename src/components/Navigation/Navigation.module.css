@@ -1,0 +1,27 @@
+.navbar {
+    grid-area: 'navbar';
+    margin-top: 8px;
+    background-color: rgb(15, 120, 164, 0.25);
+    height: 85vh;
+
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border-radius: 16px;
+    padding: 20px;
+    width: 1fr;
+  }
+
+.item a {
+  color: black;
+  font-size: large;
+  text-decoration: none;
+}
+
+
+.item a.active {
+  font-size: large;
+  color: rgb(54, 96, 136);
+}
