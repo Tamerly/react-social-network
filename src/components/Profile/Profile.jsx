@@ -7,7 +7,7 @@ export const Profile = (prors) => {
   return (
     <div>
         <ProfileInfo />
-        <MyPost posts={prors.state.posts}/>
+        <MyPost posts={prors.state.posts} addPost={prors.addPost}/>
     </div>
   )
 }

@@ -19,12 +19,6 @@ export let state = {
                 message: 'Another text Another',
                 image: 'https://i.ytimg.com/vi/sOsAdjE1DmU/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDjTxMYAzP3fLr7n_0SS-kVjWR_Tg'
             },
-            {
-                id: 4,
-                message: 'DataСаентизм',
-                image: 'https://i.ytimg.com/vi/sOsAdjE1DmU/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDjTxMYAzP3fLr7n_0SS-kVjWR_Tg'
-            },
-
         ],
     },
     dialogsPage: {
@@ -64,3 +58,14 @@ export let state = {
         ],
     }
 };
+
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        image: 'https://i.ytimg.com/vi/sxPbYh7451g/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDYO1-UNw1Ryxmk4q0tGk9ZNFuzcQ'
+    };
+
+    state.profilePage.posts.push(newPost);
+}
+
