@@ -7,18 +7,18 @@ import './App.css';
 
 
 const App = (props) => {
-  return (
-    <div className="app-wrapper">
-      <Header />
-      <Navigation />
-      <div className='content'>
-        <Routes>
-          <Route path='/profile' element={<Profile state={props.state.profilePage} addPost={props.addPost}/>} />
-          <Route path='/dialogs' element={<Dialogs state={props.state.dialogsPage}/>} />
-        </Routes>
-      </div>
-    </div>
-  );
+    return (
+        <div className="app-wrapper">
+            <Header />
+            <Navigation />
+            <div className='content'>
+                <Routes>
+                    <Route path='/profile' element={<Profile state={props.state.profilePage} addPost={props.addPost} />} />
+                    <Route path='/dialogs' element={<Dialogs state={props.state.dialogsPage} />} />
+                </Routes>
+            </div>
+        </div>
+    );
 }
 
 export default App;
