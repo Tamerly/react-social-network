@@ -1,3 +1,7 @@
+let rerenderEntireTree = () => {
+    console.log('State is changed')
+}
+
 export let state = {
     profilePage: {
         posts: [
@@ -20,6 +24,7 @@ export let state = {
                 image: 'https://i.ytimg.com/vi/sOsAdjE1DmU/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDjTxMYAzP3fLr7n_0SS-kVjWR_Tg'
             },
         ],
+        newPostText: '12345'
     },
     dialogsPage: {
         messages: [
@@ -63,9 +68,19 @@ export let addPost = (postMessage) => {
     let newPost = {
         id: 5,
         message: postMessage,
-        image: 'https://i.ytimg.com/vi/sxPbYh7451g/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDYO1-UNw1Ryxmk4q0tGk9ZNFuzcQ'
+        image: 'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017ef7cee709672ba3ceec2e044f7c/375x234'
     };
 
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree()
 }
 
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree()
+}
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer
+}
