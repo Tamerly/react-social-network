@@ -60,35 +60,35 @@ let store = {
             ],
         }
     },
-
     _callSubscriber() {
         console.log('State is changed')
-    },
-
-    addPost(postMessage) {
-        let newPost = {
-            id: 5,
-            message: this._state.profilePage.newPostText,
-            image: 'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017ef7cee709672ba3ceec2e044f7c/375x234'
-        };
-
-        this._state.profilePage.posts.push(newPost);
-        this._state.profilePage.newPostText = '';
-        this._callSubscriber(this._state)
-    },
-
-    updateNewPostText(newText) {
-        this._state.profilePage.newPostText = newText;
-        this._callSubscriber(this._state)
-    },
-
-    subscribe(observer) {
-        this._callSubscriber = observer
     },
 
     getState() {
         return this._state
     },
+    subscribe(observer) {
+        this._callSubscriber = observer
+    },
+
+    dispatch(action) { // (type: 'ADD-POST')
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: 5,
+                message: this._state.profilePage.newPostText,
+                image: 'https://avatars.mds.yandex.net/get-ott/1531675/2a0000017ef7cee709672ba3ceec2e044f7c/375x234'
+            };
+
+            this._state.profilePage.posts.push(newPost);
+            this._state.profilePage.newPostText = '';
+            this._callSubscriber(this._state)
+        }
+        else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newText;
+            this._callSubscriber(this._state)
+        }
+    },
+
 }
 
 export default store;
