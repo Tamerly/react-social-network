@@ -8,16 +8,22 @@ import './App.css';
 
 const App = (props) => {
     return (
-        <div className="app-wrapper">
-            <Header />
-            <Navigation />
-            <div className='content'>
-                <Routes>
-                    <Route path='/profile' element={<Profile
-                        profilePage={props.state.profilePage}
-                        dispatch={props.dispatch} />} />
-                    <Route path='/dialogs' element={<Dialogs state={props.state.dialogsPage} />} />
-                </Routes>
+        <div className='app-flex'>
+            <div className='app-flex-header'>
+                <Header />
+            </div>
+            <div className='app-flex-body'>
+                <div><Navigation /></div>
+                <div className='app-flex-dialogs app-flex-profile'>
+                    <Routes>
+                        <Route path='/profile' element={<Profile
+                            profilePage={props.state.profilePage}
+                            dispatch={props.dispatch} />} />
+                        <Route path='/dialogs' element={<Dialogs 
+                            store={props.store} />} />
+                    </Routes>
+                </div>
+                
             </div>
         </div>
     );
