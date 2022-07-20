@@ -47,7 +47,7 @@ export const Dialogs = (props) => {
                         className={classes.textArea}></textarea>
                     </div>
                     <div>
-                        <button onClick={ onSendMessageClick }>Send</button>
+                        <button className={classes.button} onClick={ onSendMessageClick }>Send</button>
                     </div>
                 </div>
 

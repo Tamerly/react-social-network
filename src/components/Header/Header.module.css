@@ -1,6 +1,5 @@
 .header {
     background-color: rgba(27, 75, 209, 0.25);
-    max-width: 50%;
     border-radius: 16px;
     padding: 8px;
   }
@@ -9,3 +8,11 @@
     width: 50px;
     border-radius: 8px;
   }
+
+.header {
+    text-align: justify;
+    letter-spacing: 1px;
+    height: 1em;
+    padding: 2em 10%;
+    color: #fff;
+}
