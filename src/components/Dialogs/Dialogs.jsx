@@ -39,11 +39,12 @@ export const Dialogs = (props) => {
             <div className={classes.messages}>
 
                 <div>{ messagesElements }</div>
-                <div>
-                    <div>
+                <div className={classes.inputMessage}>
+                    <div >
                         <textarea value={ newMessageBody } 
                         placeholder='Enter your message'
-                        onChange={onNewMessageChange}></textarea>
+                        onChange={onNewMessageChange}
+                        className={classes.textArea}></textarea>
                     </div>
                     <div>
                         <button onClick={ onSendMessageClick }>Send</button>

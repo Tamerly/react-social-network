@@ -1,5 +1,6 @@
 .dialogs {
-
+    display: flex;
+    justify-content: space-between;
 }
 
 .dialogsItems {
@@ -11,15 +12,36 @@
     color: rgb(19, 103, 102);
 }
 
-.dialog {
-
-}
-
 .messages {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .messages .message {
     padding-bottom: 8px;
-    color: white;
+    color: rgb(9, 51, 85);
+    margin-bottom: 4px;
+    border: 1px solid #b0e2df;
+    border-radius: 5px;
+    background-color: #b0e2df;
+}
+
+.inputMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.textArea {
+    padding: 15px 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-width: 230px;
+    height: 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    color:#787878;
 }
