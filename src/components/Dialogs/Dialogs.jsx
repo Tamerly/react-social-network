@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './Dialogs.module.css'
 import { Message } from './Message/Message.jsx'
 import { DialogItem } from './DialogItem/DialogItem.jsx'
-import { updateNewMessageBodyCreator, sendMessageCreator } from './../../redux/state.js'
+import { updateNewMessageBodyCreator, sendMessageCreator } from './../../redux/dialogs-reducer'
 
 export const Dialogs = (props) => {
 
