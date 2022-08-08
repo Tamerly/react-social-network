@@ -17,8 +17,7 @@ const App = (props) => {
                 <div className='app-flex-dialogs app-flex-profile'>
                     <Routes>
                         <Route path='/profile' element={<Profile
-                            profilePage={props.state.profilePage}
-                            dispatch={props.dispatch} />} />
+                            store={props.store} />} />
                         <Route path='/dialogs' element={<Dialogs 
                             store={props.store} />} />
                     </Routes>
